@@ -37,7 +37,7 @@ class LandmarkReader(private val context: Context) {
         val itemType = object : TypeToken<List<LandmarkResponse>>() {}.type
         val reader = InputStreamReader(inputStream)
         return gson.fromJson<List<LandmarkResponse>>(reader, itemType).map {
-                it.toLandmark() }
+            it.toLandmark() }
             .find {
                 it.name.equals(name, ignoreCase = true) }
     }

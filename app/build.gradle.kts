@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.jetbrains.kotlin.android)
 
     id("com.google.android.libraries.mapsplatform.secrets-gradle-plugin")
+    id("kotlin-kapt")
 }
 
 android {
@@ -39,25 +40,13 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
-    secrets {
-        // Optionally specify a different file name containing your secrets.
-        // The plugin defaults to "local.properties"
-        propertiesFileName = "secrets.properties"
 
-        // A properties file containing default secret values. This file can be
-        // checked in version control.
-        defaultPropertiesFileName = "local.defaults.properties"
-
-        // Configure which keys should be ignored by the plugin by providing regular expressions.
-        // "sdk.dir" is ignored by default.
-        ignoreList.add("keyToIgnore") // Ignore the key "keyToIgnore"
-        ignoreList.add("sdk.*")       // Ignore all keys matching the regexp "sdk.*"
-    }
 }
 
 dependencies {
 
     implementation(libs.androidx.core.ktx)
+    implementation(libs.kotlin.stdlib.jdk7)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
     implementation(libs.androidx.activity)
@@ -66,11 +55,12 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 
+
     // Dependency to convert Java Objects into their JSON representation
     implementation(libs.gson)
 
     // Dependency to include Maps SDK for Android
-    implementation(libs.play.services.maps)
+    implementation("com.google.android.gms:play-services-maps:18.2.0")
     implementation(libs.android.maps.utils)
 
     // Maps SDK for Android KTX Library
@@ -83,8 +73,25 @@ dependencies {
     implementation(libs.androidx.lifecycle.runtime.ktx)
 
     // Places API
-    implementation(platform(libs.kotlin.bom))
-    implementation(libs.places)
+    implementation(platform("org.jetbrains.kotlin:kotlin-bom:1.8.22"))
+    implementation("com.google.android.libraries.places:places:3.5.0")
 
     implementation("androidx.concurrent:concurrent-futures-ktx:1.2.0")
+    implementation("com.github.bumptech.glide:glide:4.15.1")
+    kapt("com.github.bumptech.glide:compiler:4.15.1")
+}
+
+secrets {
+    // Optionally specify a different file name containing your secrets.
+    // The plugin defaults to "local.properties"
+    propertiesFileName = "secrets.properties"
+
+    // A properties file containing default secret values. This file can be
+    // checked in version control.
+    defaultPropertiesFileName = "local.defaults.properties"
+
+    // Configure which keys should be ignored by the plugin by providing regular expressions.
+    // "sdk.dir" is ignored by default.
+    ignoreList.add("keyToIgnore") // Ignore the key "keyToIgnore"
+    ignoreList.add("sdk.*")       // Ignore all keys matching the regexp "sdk.*"
 }

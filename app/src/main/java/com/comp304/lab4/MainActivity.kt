@@ -26,22 +26,22 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
-        val apiKey = BuildConfig.PLACES_API_KEY
+        recyclerView = findViewById(R.id.recyclerViewLandmarkTypes)
+        landmarkTypeAdapter = LandmarkTypeRecyclerViewAdapter(this)
+        recyclerView.adapter = landmarkTypeAdapter
+        recyclerView.layoutManager = LinearLayoutManager(this)
 
+        // Define a variable to hold the Places API key.
+        val apiKey = BuildConfig.MAPS_API_KEY
+
+        // Log an error if apiKey is not set.
         if (apiKey.isEmpty() || apiKey == "DEFAULT_API_KEY") {
             Log.e("Places test", "No api key")
             finish()
             return
         }
 
-        recyclerView = findViewById(R.id.recyclerViewLandmarkTypes)
-        landmarkTypeAdapter = LandmarkTypeRecyclerViewAdapter(this)
-        recyclerView.adapter = landmarkTypeAdapter
-        recyclerView.layoutManager = LinearLayoutManager(this)
-
-        if (!Places.isInitialized()) {
-            Places.initializeWithNewPlacesApiEnabled(applicationContext, apiKey)
-        }
-
+        // Initialize the SDK
+        Places.initializeWithNewPlacesApiEnabled(applicationContext, apiKey)
     }
 }

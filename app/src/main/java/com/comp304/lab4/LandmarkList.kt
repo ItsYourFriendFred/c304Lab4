@@ -1,6 +1,9 @@
 package com.comp304.lab4
 
 import android.os.Bundle
+import android.util.Log
+import android.view.Menu
+import android.view.MenuItem
 import android.view.View
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
@@ -12,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.comp304.lab4.adapters.LandmarkRecyclerViewAdapter
 import com.comp304.lab4.data.LandmarkReader
 import com.comp304.lab4.util.Constants.LANDMARKTYPE_KEY
+import com.google.android.libraries.places.api.Places
 
 class LandmarkList : AppCompatActivity() {
 
@@ -29,6 +33,8 @@ class LandmarkList : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         errorLayout = findViewById(R.id.errorLayout)
         errorMessage = findViewById(R.id.errorMessage)
@@ -60,6 +66,20 @@ class LandmarkList : AppCompatActivity() {
             showError("Failed to load landmarks: ${e.message}")
         }
 
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            android.R.id.home -> {
+                onBackPressedDispatcher.onBackPressed()
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
     }
 
     private fun showError(message: String) {

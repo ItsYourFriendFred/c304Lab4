@@ -8,6 +8,10 @@
     <string name="landmark_list_title">Landmarks</string>
     <string name="error_loading_landmarks">Error loading landmarks</string>
     <string name="recyclerView_rating_text">Rating: %1$s ★</string>
+    <string name="text_menu_normal_map_type">Normal (Default)</string>
+    <string name="text_menu_satellite_map_type">Satellite</string>
+    <string name="text_menu_hybrid_map_type">Hybrid</string>
+    <string name="text_menu_terrain_map_type">Terrain</string>
 
     <string-array name="arrayLandmarkType">
         <item>Old Buildings</item>
