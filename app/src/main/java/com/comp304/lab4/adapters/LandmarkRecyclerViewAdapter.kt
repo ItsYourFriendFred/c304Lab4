@@ -10,9 +10,15 @@ import androidx.recyclerview.widget.RecyclerView
 import com.comp304.lab4.R
 import com.comp304.lab4.data.Landmark
 import com.comp304.lab4.data.LandmarkReader
+import com.google.android.gms.maps.model.LatLng
 import com.google.android.libraries.places.api.Places
+import com.google.android.libraries.places.api.model.CircularBounds
 import com.google.android.libraries.places.api.model.Place
+import com.google.android.libraries.places.api.model.RectangularBounds
 import com.google.android.libraries.places.api.net.PlacesClient
+import com.google.android.libraries.places.api.net.SearchByTextRequest
+
+
 
 
 internal class LandmarkRecyclerViewAdapter(
@@ -38,6 +44,20 @@ internal class LandmarkRecyclerViewAdapter(
             landmarkNameTextView.text = landmark.name
             landmarkAddressTextView.text = landmark.address
             landmarkRatingTextView.text = (context.getString(R.string.recyclerView_rating_text, landmark.rating.toString()))
+
+            val searchCenter  = LatLng(landmark.latLng.latitude, landmark.latLng.longitude)
+
+            val searchByTextRequest =
+                SearchByTextRequest.builder(landmark.name, placeFields)
+                    .setMaxResultCount(10)
+                    .setLocationRestriction(CircularBounds.newInstance(searchCenter, 1000.0))
+                    .build()
+
+            placesClient.searchByText(searchByTextRequest)
+                .addOnSuccessListener { response ->
+                    val places: List<Place> = response.places
+                }
+
 
 
         }
