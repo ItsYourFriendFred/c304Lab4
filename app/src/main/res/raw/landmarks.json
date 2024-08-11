@@ -1,0 +1,552 @@
+[
+    {
+        "geometry": {
+            "location": {
+                "lat": 43.6781,
+                "lng": -79.4095
+            },
+            "viewport": {
+                "northeast": {
+                    "lat": 43.67675512,
+                    "lng": -79.40824087
+                },
+                "southeast": {
+                    "lat": 43.67945308,
+                    "lng": -79.40806117
+                }
+            }
+        },
+        "name": "Case Loma",
+        "rating": 4.5,
+        "vicinity": "1 Austin Terrace, Toronto, ON M5R 1X8",
+        "landmarkType": "Old Buildings"
+    },
+    {
+        "geometry": {
+            "location": {
+                "lat": 43.665303,
+                "lng": -79.322759
+            },
+            "viewport": {
+                "northeast": {
+                    "lat": 43.66395812,
+                    "lng": -79.32401813
+                },
+                "southeast": {
+                    "lat": 43.66665608,
+                    "lng": -79.32132017
+                }
+            }
+        },
+        "name": "Ashbridge Estate",
+        "rating": 4.4,
+        "vicinity": "1444 Queen St E, Toronto, ON M4L 1E1",
+        "landmarkType": "Old Buildings"
+    },
+    {
+        "geometry": {
+            "location": {
+                "lat": 43.6525,
+                "lng": -79.381667
+            },
+            "viewport": {
+                "northeast": {
+                    "lat": 43.65115512,
+                    "lng": -79.38292613
+                },
+                "southeast": {
+                    "lat": 43.65385308,
+                    "lng": -79.38022817
+                }
+            }
+        },
+        "name": "Old City Hall",
+        "rating": 4.6,
+        "vicinity": "60 Queen St W, Toronto, ON M5H 2M3",
+        "landmarkType": "Old Buildings"
+    },
+    {
+        "geometry": {
+            "location": {
+                "lat": 43.655,
+                "lng": -79.377
+            },
+            "viewport": {
+                "northeast": {
+                    "lat": 43.65365512,
+                    "lng": -79.37825913
+                },
+                "southeast": {
+                    "lat": 43.65635308,
+                    "lng": -79.37556117
+                }
+            }
+        },
+        "name": "St. Michael's Cathedral Basilica",
+        "rating": 4.8,
+        "vicinity": "65 Bond St, Toronto, ON M5B 1X1",
+        "landmarkType": "Old Buildings"
+    },
+    {
+        "geometry": {
+            "location": {
+                "lat": 43.648366,
+                "lng": -79.374284
+            },
+            "viewport": {
+                "northeast": {
+                    "lat": 43.64702112,
+                    "lng": -79.37554313
+                },
+                "southeast": {
+                    "lat": 43.64971908,
+                    "lng": -79.37284517
+                }
+            }
+        },
+        "name": "Gooderham Building",
+        "rating": 4.7,
+        "vicinity": "49 Wellington St E, Toronto, ON M5E 1C9",
+        "landmarkType": "Old Buildings"
+    },
+    {
+        "geometry": {
+            "location": {
+                "lat": 43.667679,
+                "lng": -79.394809
+            },
+            "viewport": {
+                "northeast": {
+                    "lat": 43.66633412,
+                    "lng": -79.39606813
+                },
+                "southeast": {
+                    "lat": 43.669032,
+                    "lng": -79.39337
+                }
+            }
+        },
+        "name": "Royal Ontario Museum",
+        "rating": 4.7,
+        "vicinity": "100 Queens Park, Toronto, ON M5S 2C6",
+        "landmarkType": "Museums"
+    },
+    {
+        "geometry": {
+            "location": {
+                "lat": 43.653889,
+                "lng":  -79.392778
+            },
+            "viewport": {
+                "northeast": {
+                    "lat": 43.65254412,
+                    "lng": -79.39403713
+                },
+                "southeast": {
+                    "lat": 43.655242,
+                    "lng": -79.391339
+                }
+            }
+        },
+        "name": "Art Gallery of Ontario",
+        "rating": 4.7,
+        "vicinity": "317 Dundas St W, Toronto, ON M5T 1G4",
+        "landmarkType": "Museums"
+    },
+    {
+        "geometry": {
+            "location": {
+                "lat": 43.646944,
+                "lng": -79.377222
+            },
+            "viewport": {
+                "northeast": {
+                    "lat": 43.64559912,
+                    "lng": -79.37848113
+                },
+                "southeast": {
+                    "lat": 43.648297,
+                    "lng": -79.375783
+                }
+            }
+        },
+        "name": "The Hockey Hall of Fame",
+        "rating": 4.7,
+        "vicinity": "30 Yonge St, Toronto, ON M5E 1X8",
+        "landmarkType": "Museums"
+    },
+    {
+        "geometry": {
+            "location": {
+                "lat": 43.716667,
+                "lng": -79.338333
+            },
+            "viewport": {
+                "northeast": {
+                    "lat": 43.71532212,
+                    "lng": -79.33959213
+                },
+                "southeast": {
+                    "lat": 43.71802,
+                    "lng": -79.336894
+                }
+            }
+        },
+        "name": "Ontario Science Centre",
+        "rating": 4.4,
+        "vicinity": "770 Don Mills Rd., North York, ON M3C 1T3",
+        "landmarkType": "Museums"
+    },
+    {
+        "geometry": {
+            "location": {
+                "lat": 43.667222,
+                "lng": -79.400278
+            },
+            "viewport": {
+                "northeast": {
+                    "lat": 43.66587712,
+                    "lng": -79.40153713
+                },
+                "southeast": {
+                    "lat": 43.668575,
+                    "lng": -79.398839
+                }
+            }
+        },
+        "name": "Bata Shoe Museum",
+        "rating": 4.4,
+        "vicinity": "327 Bloor St W, Toronto, ON M5S 1W7",
+        "landmarkType": "Museums"
+    },
+    {
+        "geometry": {
+            "location": {
+                "lat": 43.641389,
+                "lng": -79.389167
+            },
+            "viewport": {
+                "northeast": {
+                    "lat": 43.64004412,
+                    "lng": -79.39042613
+                },
+                "southeast": {
+                    "lat": 43.642742,
+                    "lng": -79.387728
+                }
+            }
+        },
+        "name": "Rogers Centre",
+        "rating": 4.5,
+        "vicinity": "1 Blue Jays Way, Toronto, ON M5V 1J1",
+        "landmarkType": "Stadiums"
+    },
+    {
+        "geometry": {
+            "location": {
+                "lat": 43.643333,
+                "lng": -79.379167
+            },
+            "viewport": {
+                "northeast": {
+                    "lat": 43.64198812,
+                    "lng": -79.38042613
+                },
+                "southeast": {
+                    "lat": 43.644686,
+                    "lng": -79.377728
+                }
+            }
+        },
+        "name": "Scotiabank Arena",
+        "rating": 4.5,
+        "vicinity": "40 Bay St., Toronto, ON M5J 2X2",
+        "landmarkType": "Stadiums"
+    },
+    {
+        "geometry": {
+            "location": {
+                "lat": 43.635833,
+                "lng": -79.415
+            },
+            "viewport": {
+                "northeast": {
+                    "lat": 43.63448812,
+                    "lng": -79.41625913
+                },
+                "southeast": {
+                    "lat": 43.637186,
+                    "lng": -79.413561
+                }
+            }
+        },
+        "name": "Coca-Cola Coliseum",
+        "rating": 4.4,
+        "vicinity": "45 Manitoba Dr, Toronto, ON M6K 3C3",
+        "landmarkType": "Stadiums"
+    },
+    {
+        "geometry": {
+            "location": {
+                "lat": 43.632778,
+                "lng": -79.418611
+            },
+            "viewport": {
+                "northeast": {
+                    "lat": 43.63143312,
+                    "lng": -79.41987013
+                },
+                "southeast": {
+                    "lat": 43.634131,
+                    "lng": -79.417172
+                }
+            }
+        },
+        "name": "BMO Field",
+        "rating": 4.5,
+        "vicinity": "170 Princes' Blvd, Toronto, ON M6K 3C3",
+        "landmarkType": "Stadiums"
+    },
+    {
+        "geometry": {
+            "location": {
+                "lat": 43.771556,
+                "lng": -79.512056
+            },
+            "viewport": {
+                "northeast": {
+                    "lat": 43.77021112,
+                    "lng": -79.51331513
+                },
+                "southeast": {
+                    "lat": 43.772909,
+                    "lng": -79.510617
+                }
+            }
+        },
+        "name": "Sobeys Stadium",
+        "rating": 4.6,
+        "vicinity": "1 Shoreham Dr, North York, ON M3N 3A6",
+        "landmarkType": "Stadiums"
+    },
+    {
+        "geometry": {
+            "location": {
+                "lat": 43.6426,
+                "lng": 79.3871
+            },
+            "viewport": {
+                "northeast": {
+                    "lat": 43.64125512,
+                    "lng": -79.38835913
+                },
+                "southeast": {
+                    "lat": 43.643953,
+                    "lng": -79.385661
+                }
+            }
+        },
+        "name": "CN Tower",
+        "rating": 4.6,
+        "vicinity": "290 Bremner Blvd, Toronto, ON M5V 3L9",
+        "landmarkType": "Attractions"
+    },
+    {
+        "geometry": {
+            "location": {
+                "lat": 43.629,
+                "lng": -79.417
+            },
+            "viewport": {
+                "northeast": {
+                    "lat": 43.62765512,
+                    "lng": -79.41825913
+                },
+                "southeast": {
+                    "lat": 43.630353,
+                    "lng": -79.415561
+                }
+            }
+        },
+        "name": "Ontario Place",
+        "rating": 4.4,
+        "vicinity": "955 Lake Shore Blvd W, Toronto, ON M6K 3B9",
+        "landmarkType": "Attractions"
+    },
+    {
+        "geometry": {
+            "location": {
+                "lat": 43.632778,
+                "lng": -79.416111
+            },
+            "viewport": {
+                "northeast": {
+                    "lat": 43.63143312,
+                    "lng": -79.41737013
+                },
+                "southeast": {
+                    "lat": 43.634131,
+                    "lng": -79.414672
+                }
+            }
+        },
+        "name": "Exhibition Place",
+        "rating": 4.4,
+        "vicinity": "100 Princes' Blvd, Toronto, ON M6K 3C3",
+        "landmarkType": "Attractions"
+    },
+    {
+        "geometry": {
+            "location": {
+                "lat": 43.820278,
+                "lng": -79.182778
+            },
+            "viewport": {
+                "northeast": {
+                    "lat": 43.81893312,
+                    "lng": -79.18403713
+                },
+                "southeast": {
+                    "lat": 43.821631,
+                    "lng": -79.181339
+                }
+            }
+        },
+        "name": "Toronto Zoo",
+        "rating": 4.4,
+        "vicinity": "2000 Meadowvale Rd, Toronto, ON M1B 5K7",
+        "landmarkType": "Attractions"
+    },
+    {
+        "geometry": {
+            "location": {
+                "lat": 43.655,
+                "lng": -79.379722
+            },
+            "viewport": {
+                "northeast": {
+                    "lat": 43.65365512,
+                    "lng": -79.38098113
+                },
+                "southeast": {
+                    "lat": 43.656353,
+                    "lng": -79.378283
+                }
+            }
+        },
+        "name": "Ed Mirvish Theatre",
+        "rating": 4.7,
+        "vicinity": "244 Victoria St, Toronto, ON M5B 1V8",
+        "landmarkType": "Attractions"
+    },
+    {
+        "geometry": {
+            "location": {
+                "lat": 43.620833,
+                "lng": -79.378611
+            },
+            "viewport": {
+                "northeast": {
+                    "lat": 43.61948812,
+                    "lng": -79.37987013
+                },
+                "southeast": {
+                    "lat": 43.622186,
+                    "lng": -79.377172
+                }
+            }
+        },
+        "name": "Toronto Island Park",
+        "rating": 4.7,
+        "vicinity": "9 Queens Quay W, Toronto, ON M5J 2H3",
+        "landmarkType": "Parks"
+    },
+    {
+        "geometry": {
+            "location": {
+                "lat": 43.646821,
+                "lng": -79.462996
+            },
+            "viewport": {
+                "northeast": {
+                    "lat": 43.64547612,
+                    "lng": -79.46425513
+                },
+                "southeast": {
+                    "lat": 43.648174,
+                    "lng": -79.461557
+                }
+            }
+        },
+        "name": "High Park",
+        "rating": 4.7,
+        "vicinity": "1873 Bloor St W, Toronto, ON M6R 2Z3",
+        "landmarkType": "Parks"
+    },
+    {
+        "geometry": {
+            "location": {
+                "lat": 43.636944,
+                "lng": 139.5772452
+            },
+            "viewport": {
+                "northeast": {
+                    "lat": 43.63559912,
+                    "lng": -79.39542613
+                },
+                "southeast": {
+                    "lat": 43.638297,
+                    "lng": -79.392728
+                }
+            }
+        },
+        "name": "Toronto Music Garden",
+        "rating": 4.7,
+        "vicinity": "479 Queens Quay W, Toronto, ON M5V 3M8",
+        "landmarkType": "Parks"
+    },
+    {
+        "geometry": {
+            "location": {
+                "lat": 43.71588492,
+                "lng": -79.22540137
+            },
+            "viewport": {
+                "northeast": {
+                    "lat": 43.71454004,
+                    "lng": -79.2266605
+                },
+                "southeast": {
+                    "lat": 43.71723792,
+                    "lng": -79.22396237
+                }
+            }
+        },
+        "name": "Bluffer's Park",
+        "rating": 4.6,
+        "vicinity": "1 Brimley Rd, Scarborough, ON M1M 3H4",
+        "landmarkType": "Parks"
+    },
+    {
+        "geometry": {
+            "location": {
+                "lat": 43.664659,
+                "lng": -79.392453
+            },
+            "viewport": {
+                "northeast": {
+                    "lat": 43.66331412,
+                    "lng": -79.39371213
+                },
+                "southeast": {
+                    "lat": 43.666012,
+                    "lng": -79.391014
+                }
+            }
+        },
+        "name": "Queen's Park",
+        "rating": 4.5,
+        "vicinity": "110 Wellesley St W, Toronto, ON M7A 1A2",
+        "landmarkType": "Parks"
+    }
+]

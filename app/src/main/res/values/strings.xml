@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">VisitToronto</string>
+    <string name="text_name_preview">CN Tower</string>
+    <string name="text_address_preview">290 Green Blvd, Toronto, ON M5V 3L9</string>
+    <string name="text_rating_preview">Rating: 4.8</string>
+    <string name="text_landmark_type_preview"><![CDATA[Parks & Nature]]></string>
+    <string name="main_title">Landmark Types</string>
+    <string name="landmark_list_title">Landmarks</string>
+    <string name="error_loading_landmarks">Error loading landmarks</string>
+    <string name="recyclerView_rating_text">Rating: %1$s ★</string>
+
+    <string-array name="arrayLandmarkType">
+        <item>Old Buildings</item>
+        <item>Museums</item>
+        <item>Stadiums</item>
+        <item>Attractions</item>
+        <item>Parks</item>
+    </string-array>
+</resources>

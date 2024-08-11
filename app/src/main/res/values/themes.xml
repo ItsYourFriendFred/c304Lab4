@@ -1,0 +1,11 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Fredwong_COMP304Lab4_ex1" parent="Theme.MaterialComponents.DayNight">
+        <!-- Customize your light theme here. -->
+        <item name="colorPrimary">@color/light_teal</item>
+        <item name="colorPrimaryVariant">@color/dark_teal</item>
+        <item name="colorOnPrimary">@color/white</item>
+    </style>
+
+    <style name="Theme.Fredwong_COMP304Lab4_ex1" parent="Base.Theme.Fredwong_COMP304Lab4_ex1" />
+</resources>
