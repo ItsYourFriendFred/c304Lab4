@@ -3,6 +3,7 @@ package com.comp304.lab4
 import android.os.Bundle
 import android.util.Log
 import android.view.Menu
+import android.view.MenuInflater
 import android.view.MenuItem
 import android.view.View
 import android.widget.TextView
@@ -15,6 +16,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.comp304.lab4.adapters.LandmarkRecyclerViewAdapter
 import com.comp304.lab4.data.LandmarkReader
 import com.comp304.lab4.util.Constants.LANDMARKTYPE_KEY
+import com.google.android.gms.maps.GoogleMap
 import com.google.android.libraries.places.api.Places
 
 class LandmarkList : AppCompatActivity() {
@@ -82,6 +84,7 @@ class LandmarkList : AppCompatActivity() {
         }
     }
 
+    // Toggle visibility of an error message if the RecyclerView is empty or fails to load any landmarks
     private fun showError(message: String) {
         // Show error message and hide the RecyclerView
         recyclerView.visibility = View.GONE

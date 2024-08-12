@@ -5,6 +5,7 @@ import android.os.Build
 import android.os.Build.*
 import android.os.Bundle
 import android.view.Menu
+import android.view.MenuInflater
 import android.view.MenuItem
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -46,6 +47,8 @@ class LandmarkMap : AppCompatActivity() {
             }
         }
 
+    private lateinit var googleMap: GoogleMap
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -63,7 +66,7 @@ class LandmarkMap : AppCompatActivity() {
         lifecycleScope.launch {
             lifecycle.repeatOnLifecycle(Lifecycle.State.CREATED) {
                 // Get map
-                val googleMap = mapFragment.awaitMap()
+                googleMap = mapFragment.awaitMap()
 
                 googleMap.uiSettings.isMapToolbarEnabled = true
                 googleMap.uiSettings.isCompassEnabled = true
@@ -82,12 +85,29 @@ class LandmarkMap : AppCompatActivity() {
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        val inflater: MenuInflater = menuInflater
+        inflater.inflate(R.menu.menu_map_options, menu)
         return true
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
-
+            R.id.menu_normal_map -> {
+                googleMap.mapType = GoogleMap.MAP_TYPE_NORMAL
+                true
+            }
+            R.id.menu_satellite_map -> {
+                googleMap.mapType = GoogleMap.MAP_TYPE_SATELLITE
+                true
+            }
+            R.id.menu_hybrid_map -> {
+                googleMap.mapType = GoogleMap.MAP_TYPE_HYBRID
+                true
+            }
+            R.id.menu_terrain_map -> {
+                googleMap.mapType = GoogleMap.MAP_TYPE_TERRAIN
+                true
+            }
             android.R.id.home -> {
                 onBackPressedDispatcher.onBackPressed()
                 true

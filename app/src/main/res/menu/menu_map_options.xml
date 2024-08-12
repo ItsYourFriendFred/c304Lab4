@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:title="@string/text_menu_normal_map_type"
+        android:id="@+id/menu_normal_map"
+        app:showAsAction="ifRoom|collapseActionView"/>
+    <item
+        android:title="@string/text_menu_satellite_map_type"
+        android:id="@+id/menu_satellite_map"
+        app:showAsAction="ifRoom|collapseActionView"/>
+    <item
+        android:title="@string/text_menu_hybrid_map_type"
+        android:id="@+id/menu_hybrid_map"/>
+    <item
+        android:title="@string/text_menu_terrain_map_type"
+        android:id="@+id/menu_terrain_map"/>
+
+</menu>
