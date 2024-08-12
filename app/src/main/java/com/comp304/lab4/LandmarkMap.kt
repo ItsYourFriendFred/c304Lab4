@@ -1,8 +1,7 @@
 package com.comp304.lab4
 
-import android.graphics.Camera
-import android.os.Build
-import android.os.Build.*
+import android.os.Build.VERSION
+import android.os.Build.VERSION_CODES
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuInflater
@@ -14,16 +13,15 @@ import androidx.core.view.WindowInsetsCompat
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
+import com.comp304.lab4.adapters.MarkerInfoWindowAdapter
 import com.comp304.lab4.data.Landmark
 import com.comp304.lab4.data.LandmarkReader
 import com.comp304.lab4.util.Constants.LANDMARKLATLNG_KEY
 import com.comp304.lab4.util.Constants.LANDMARKNAME_KEY
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
-import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.LatLng
-import com.google.android.gms.maps.model.LatLngBounds
 import com.google.android.gms.maps.model.MarkerOptions
 import com.google.maps.android.ktx.awaitMap
 import com.google.maps.android.ktx.awaitMapLoad
@@ -68,10 +66,10 @@ class LandmarkMap : AppCompatActivity() {
                 // Get map
                 googleMap = mapFragment.awaitMap()
 
-                googleMap.uiSettings.isMapToolbarEnabled = true
-                googleMap.uiSettings.isCompassEnabled = true
-                googleMap.uiSettings.isZoomControlsEnabled = true
-                googleMap.mapType = GoogleMap.MAP_TYPE_NORMAL
+                configureDefaultMapSettings(googleMap)
+
+                // Set the custom InfoWindowAdapter
+                googleMap.setInfoWindowAdapter(MarkerInfoWindowAdapter(this@LandmarkMap))
 
                 // Wait for map to finish loading
                 googleMap.awaitMapLoad()
@@ -117,14 +115,22 @@ class LandmarkMap : AppCompatActivity() {
     }
 
     private fun addMarker(googleMap: GoogleMap) {
-        val marker = latLng?.let {
-            MarkerOptions()
-                .title(name)
-                .position(it)
-        }?.let {
+        latLng?.let {
             googleMap.addMarker(
-                it
-            )
+                MarkerOptions()
+                    .title(name)
+                    .position(it)
+            )?.apply {
+                tag = landmark
+                showInfoWindow()
+            }
         }
+    }
+
+    private fun configureDefaultMapSettings(googleMap: GoogleMap) {
+        googleMap.uiSettings.isMapToolbarEnabled = true
+        googleMap.uiSettings.isCompassEnabled = true
+        googleMap.uiSettings.isZoomControlsEnabled = true
+        googleMap.mapType = GoogleMap.MAP_TYPE_NORMAL
     }
 }
