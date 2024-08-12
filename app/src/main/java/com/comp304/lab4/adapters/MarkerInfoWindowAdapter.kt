@@ -9,6 +9,7 @@ import com.comp304.lab4.data.Landmark
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.model.Marker
 
+// Custom Marker Info Window
 class MarkerInfoWindowAdapter(
     private val context: Context
 ) : GoogleMap.InfoWindowAdapter {
@@ -34,8 +35,7 @@ class MarkerInfoWindowAdapter(
     }
 
     override fun getInfoWindow(marker: Marker): View? {
-        // Return null to indicate that the
-        // default window (white bubble) should be used
+        // Returning null indicates that the default window (white bubble) should be used
         return null
     }
 }

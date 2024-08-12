@@ -16,12 +16,16 @@ internal class LandmarkTypeRecyclerViewAdapter(
     private val context: Context
 ) : RecyclerView.Adapter<LandmarkTypeRecyclerViewAdapter.MyViewHolder>() {
 
+    // Get the types of landmarks from string array defined in resources
     private var landmarkTypes: List<String> = context.resources.getStringArray(R.array.arrayLandmarkType).toList()
 
     inner class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        // Set references to the UI components
         private val landmarkTypeTextView: TextView = itemView.findViewById(R.id.textViewLandmarkType)
         private val cardView: CardView = itemView.findViewById(R.id.cardLandmarkType)
 
+        // Bind the retrieved Landmark fields to their corresponding UI components in the RecyclerView's card
+        // And set an OnClick listener on each card to pass that Landmark's type to the LandmarkList Activity
         fun bind(landmarkType: String) {
             landmarkTypeTextView.text = landmarkType
 

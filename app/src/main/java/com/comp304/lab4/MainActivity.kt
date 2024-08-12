@@ -26,12 +26,13 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
+        // Set up the RecyclerView to display the types of landmarks
         recyclerView = findViewById(R.id.recyclerViewLandmarkTypes)
         landmarkTypeAdapter = LandmarkTypeRecyclerViewAdapter(this)
         recyclerView.adapter = landmarkTypeAdapter
         recyclerView.layoutManager = LinearLayoutManager(this)
 
-        // Define a variable to hold the Places API key.
+        // Define a variable to hold the Maps/Places API key.
         val apiKey = BuildConfig.MAPS_API_KEY
 
         // Log an error if apiKey is not set.
@@ -41,7 +42,7 @@ class MainActivity : AppCompatActivity() {
             return
         }
 
-        // Initialize the SDK
+        // Initialize the SDK globally so it can be accessed anywhere (i.e., any activity or context)
         Places.initializeWithNewPlacesApiEnabled(applicationContext, apiKey)
     }
 }

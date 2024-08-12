@@ -20,6 +20,9 @@ data class LandmarkResponse(
     )
 }
 
+/**
+ * Extension function to convert [LandmarkResponse] to [Landmark]
+ */
 fun LandmarkResponse.toLandmark(): Landmark = Landmark(
     name = name,
     latLng = LatLng(geometry.location.lat, geometry.location.lng),

@@ -59,8 +59,10 @@ class LandmarkMap : AppCompatActivity() {
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
+        // Get reference to Map fragment UI component
         val mapFragment =
             supportFragmentManager.findFragmentById(R.id.map_fragment) as SupportMapFragment
+        // Launch a coroutine to handle the asynchronous GoogleMap instance calls
         lifecycleScope.launch {
             lifecycle.repeatOnLifecycle(Lifecycle.State.CREATED) {
                 // Get map
@@ -74,7 +76,8 @@ class LandmarkMap : AppCompatActivity() {
                 // Wait for map to finish loading
                 googleMap.awaitMapLoad()
 
-                latLng?.let { CameraUpdateFactory.newLatLngZoom(it, 15f) }
+                // Move camera to the chosen Landmark
+                latLng?.let { CameraUpdateFactory.newLatLngZoom(it, 14f) }
                     ?.let { googleMap.moveCamera(it) }
 
                 addMarker(googleMap)
@@ -114,6 +117,7 @@ class LandmarkMap : AppCompatActivity() {
         }
     }
 
+    // Add marker to map and show it immediately as if clicked
     private fun addMarker(googleMap: GoogleMap) {
         latLng?.let {
             googleMap.addMarker(
@@ -127,6 +131,7 @@ class LandmarkMap : AppCompatActivity() {
         }
     }
 
+    // Set default UI settings of Google Map object
     private fun configureDefaultMapSettings(googleMap: GoogleMap) {
         googleMap.uiSettings.isMapToolbarEnabled = true
         googleMap.uiSettings.isCompassEnabled = true

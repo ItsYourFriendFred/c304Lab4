@@ -16,7 +16,7 @@
                 }
             }
         },
-        "name": "Case Loma",
+        "name": "Casa Loma",
         "rating": 4.5,
         "vicinity": "1 Austin Terrace, Toronto, ON M5R 1X8",
         "landmarkType": "Old Buildings"
@@ -60,7 +60,7 @@
                 }
             }
         },
-        "name": "Old City Hall",
+        "name": "Toronto Old City Hall",
         "rating": 4.6,
         "vicinity": "60 Queen St W, Toronto, ON M5H 2M3",
         "landmarkType": "Old Buildings"
@@ -170,7 +170,7 @@
                 }
             }
         },
-        "name": "The Hockey Hall of Fame",
+        "name": "Hockey Hall of Fame",
         "rating": 4.7,
         "vicinity": "30 Yonge St, Toronto, ON M5E 1X8",
         "landmarkType": "Museums"
@@ -522,7 +522,7 @@
                 }
             }
         },
-        "name": "Bluffer's Park",
+        "name": "Bluffer's Park Beach",
         "rating": 4.6,
         "vicinity": "1 Brimley Rd, Scarborough, ON M1M 3H4",
         "landmarkType": "Parks"
